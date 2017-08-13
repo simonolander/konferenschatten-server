@@ -28,8 +28,6 @@ nbdist/
 gradle/
 gradlew
 gradlew.bat
-/jooq/
-
 # Ignore Gradle GUI config
 gradle-app.setting
 
