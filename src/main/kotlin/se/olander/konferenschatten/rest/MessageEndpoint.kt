@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import org.jooq.DSLContext
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.*
-import se.olander.konferenschatten.jooq.konferenschatten.Tables
-import se.olander.konferenschatten.jooq.konferenschatten.tables.pojos.Message
-import se.olander.konferenschatten.jooq.konferenschatten.tables.records.MessageRecord
+import se.olander.konferenschatten.jooq.Tables
+import se.olander.konferenschatten.jooq.tables.pojos.Message
+import se.olander.konferenschatten.jooq.tables.records.MessageRecord
 
 @CrossOrigin
 @RestController("/rest/messages")
