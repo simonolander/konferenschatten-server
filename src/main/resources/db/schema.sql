@@ -5,5 +5,6 @@ CREATE TABLE message (
   timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   username VARCHAR(255),
   text TEXT,
-  image_url VARCHAR(255)
+  image_url VARCHAR(255),
+  extra JSON
 );

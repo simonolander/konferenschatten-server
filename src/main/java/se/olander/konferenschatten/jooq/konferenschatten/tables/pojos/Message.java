@@ -23,13 +23,14 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Message implements Serializable {
 
-    private static final long serialVersionUID = 178488594;
+    private static final long serialVersionUID = 1961138060;
 
     private Integer   id;
     private Timestamp timestamp;
     private String    username;
     private String    text;
     private String    imageUrl;
+    private Object    extra;
 
     public Message() {}
 
@@ -39,6 +40,7 @@ public class Message implements Serializable {
         this.username = value.username;
         this.text = value.text;
         this.imageUrl = value.imageUrl;
+        this.extra = value.extra;
     }
 
     public Message(
@@ -46,13 +48,15 @@ public class Message implements Serializable {
         Timestamp timestamp,
         String    username,
         String    text,
-        String    imageUrl
+        String    imageUrl,
+        Object    extra
     ) {
         this.id = id;
         this.timestamp = timestamp;
         this.username = username;
         this.text = text;
         this.imageUrl = imageUrl;
+        this.extra = extra;
     }
 
     public Integer getId() {
@@ -95,6 +99,14 @@ public class Message implements Serializable {
         this.imageUrl = imageUrl;
     }
 
+    public Object getExtra() {
+        return this.extra;
+    }
+
+    public void setExtra(Object extra) {
+        this.extra = extra;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Message (");
@@ -104,6 +116,7 @@ public class Message implements Serializable {
         sb.append(", ").append(username);
         sb.append(", ").append(text);
         sb.append(", ").append(imageUrl);
+        sb.append(", ").append(extra);
 
         sb.append(")");
         return sb.toString();

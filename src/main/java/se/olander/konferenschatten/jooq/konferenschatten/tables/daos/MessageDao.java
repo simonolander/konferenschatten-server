@@ -92,4 +92,11 @@ public class MessageDao extends DAOImpl<MessageRecord, se.olander.konferenschatt
     public List<se.olander.konferenschatten.jooq.konferenschatten.tables.pojos.Message> fetchByImageUrl(String... values) {
         return fetch(Message.MESSAGE.IMAGE_URL, values);
     }
+
+    /**
+     * Fetch records that have <code>extra IN (values)</code>
+     */
+    public List<se.olander.konferenschatten.jooq.konferenschatten.tables.pojos.Message> fetchByExtra(Object... values) {
+        return fetch(Message.MESSAGE.EXTRA, values);
+    }
 }
