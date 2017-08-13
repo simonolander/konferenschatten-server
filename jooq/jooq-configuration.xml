@@ -68,8 +68,8 @@
 
                  If left empty, jOOQ will generate all available schemata. See the
                  manual's next section to learn how to generate several schemata -->
-            <inputCatalog>konferenschatten</inputCatalog>
-            <outputCatalogToDefault>true</outputCatalogToDefault>
+            <inputSchema></inputSchema>
+            <outputSchemaToDefault>true</outputSchemaToDefault>
         </database>
 
         <generate>
