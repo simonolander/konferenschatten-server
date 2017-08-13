@@ -8,3 +8,13 @@ CREATE TABLE message (
   image_url VARCHAR(255),
   extra JSON
 );
+
+INSERT INTO `message` (`id`, `timestamp`, `username`, `text`, `image_url`, `extra`)
+VALUES (
+    1,
+    '2017-08-13 16:25:37',
+    'System',
+    'Välkommen till Konferenschatten®!',
+    'https://images10.newegg.com/NeweggImage/ProductImage/11-165-083-14.jpg',
+    '{"text": "test"}'
+);
