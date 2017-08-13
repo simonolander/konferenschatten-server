@@ -27,6 +27,10 @@ compileTestKotlin {
 	kotlinOptions.jvmTarget = "1.8"
 }
 
+springBoot {
+	executable = true
+}
+
 repositories {
 	mavenCentral()
 }
