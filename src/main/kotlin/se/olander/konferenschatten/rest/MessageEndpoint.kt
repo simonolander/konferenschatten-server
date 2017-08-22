@@ -20,7 +20,7 @@ class MessageEndpoint (@Autowired val dslContext: DSLContext) {
         record.username = message.username
         record.text = message.text
         record.imageUrl = message.imageUrl
-        record.extra = ObjectMapper().writeValueAsString(message.extra)
+        record.data = ObjectMapper().writeValueAsString(message.data)
 
         val answer = dslContext.insertInto(Tables.MESSAGE)
                 .set(record)
@@ -55,7 +55,7 @@ class MessageEndpoint (@Autowired val dslContext: DSLContext) {
                             it.username,
                             it.text,
                             it.imageUrl,
-                            ObjectMapper().readValue(it.extra as String?, Map::class.java)
+                            ObjectMapper().readValue(it.data as String?, Map::class.java)
                     )
                 }
     }

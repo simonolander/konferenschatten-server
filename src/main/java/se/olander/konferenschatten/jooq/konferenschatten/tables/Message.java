@@ -36,7 +36,7 @@ import se.olander.konferenschatten.jooq.konferenschatten.tables.records.MessageR
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Message extends TableImpl<MessageRecord> {
 
-    private static final long serialVersionUID = -1585684913;
+    private static final long serialVersionUID = 636213105;
 
     /**
      * The reference instance of <code>konferenschatten.message</code>
@@ -77,9 +77,9 @@ public class Message extends TableImpl<MessageRecord> {
     public final TableField<MessageRecord, String> IMAGE_URL = createField("image_url", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
 
     /**
-     * The column <code>konferenschatten.message.extra</code>.
+     * The column <code>konferenschatten.message.data</code>.
      */
-    public final TableField<MessageRecord, Object> EXTRA = createField("extra", org.jooq.impl.DefaultDataType.getDefaultDataType("json"), this, "");
+    public final TableField<MessageRecord, Object> DATA = createField("data", org.jooq.impl.DefaultDataType.getDefaultDataType("json"), this, "");
 
     /**
      * Create a <code>konferenschatten.message</code> table reference

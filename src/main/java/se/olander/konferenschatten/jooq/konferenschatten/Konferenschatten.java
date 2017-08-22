@@ -16,6 +16,7 @@ import org.jooq.impl.SchemaImpl;
 
 import se.olander.konferenschatten.jooq.DefaultCatalog;
 import se.olander.konferenschatten.jooq.konferenschatten.tables.Message;
+import se.olander.konferenschatten.jooq.konferenschatten.tables.Meta;
 
 
 /**
@@ -31,7 +32,7 @@ import se.olander.konferenschatten.jooq.konferenschatten.tables.Message;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Konferenschatten extends SchemaImpl {
 
-    private static final long serialVersionUID = 1804954087;
+    private static final long serialVersionUID = 795340180;
 
     /**
      * The reference instance of <code>konferenschatten</code>
@@ -42,6 +43,11 @@ public class Konferenschatten extends SchemaImpl {
      * The table <code>konferenschatten.message</code>.
      */
     public final Message MESSAGE = se.olander.konferenschatten.jooq.konferenschatten.tables.Message.MESSAGE;
+
+    /**
+     * The table <code>konferenschatten.meta</code>.
+     */
+    public final Meta META = se.olander.konferenschatten.jooq.konferenschatten.tables.Meta.META;
 
     /**
      * No further instances allowed
@@ -68,6 +74,7 @@ public class Konferenschatten extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
-            Message.MESSAGE);
+            Message.MESSAGE,
+            Meta.META);
     }
 }

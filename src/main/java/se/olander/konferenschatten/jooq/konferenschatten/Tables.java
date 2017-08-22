@@ -7,6 +7,7 @@ package se.olander.konferenschatten.jooq.konferenschatten;
 import javax.annotation.Generated;
 
 import se.olander.konferenschatten.jooq.konferenschatten.tables.Message;
+import se.olander.konferenschatten.jooq.konferenschatten.tables.Meta;
 
 
 /**
@@ -26,4 +27,9 @@ public class Tables {
      * The table <code>konferenschatten.message</code>.
      */
     public static final Message MESSAGE = se.olander.konferenschatten.jooq.konferenschatten.tables.Message.MESSAGE;
+
+    /**
+     * The table <code>konferenschatten.meta</code>.
+     */
+    public static final Meta META = se.olander.konferenschatten.jooq.konferenschatten.tables.Meta.META;
 }

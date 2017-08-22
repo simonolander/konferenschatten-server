@@ -30,7 +30,7 @@ import se.olander.konferenschatten.jooq.konferenschatten.tables.Message;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements Record6<Integer, Timestamp, String, String, String, Object> {
 
-    private static final long serialVersionUID = -2005896948;
+    private static final long serialVersionUID = 2032897556;
 
     /**
      * Setter for <code>konferenschatten.message.id</code>.
@@ -103,16 +103,16 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
     }
 
     /**
-     * Setter for <code>konferenschatten.message.extra</code>.
+     * Setter for <code>konferenschatten.message.data</code>.
      */
-    public void setExtra(Object value) {
+    public void setData(Object value) {
         set(5, value);
     }
 
     /**
-     * Getter for <code>konferenschatten.message.extra</code>.
+     * Getter for <code>konferenschatten.message.data</code>.
      */
-    public Object getExtra() {
+    public Object getData() {
         return (Object) get(5);
     }
 
@@ -193,7 +193,7 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
      */
     @Override
     public Field<Object> field6() {
-        return Message.MESSAGE.EXTRA;
+        return Message.MESSAGE.DATA;
     }
 
     /**
@@ -241,7 +241,7 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
      */
     @Override
     public Object value6() {
-        return getExtra();
+        return getData();
     }
 
     /**
@@ -294,7 +294,7 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
      */
     @Override
     public MessageRecord value6(Object value) {
-        setExtra(value);
+        setData(value);
         return this;
     }
 
@@ -326,7 +326,7 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
     /**
      * Create a detached, initialised MessageRecord
      */
-    public MessageRecord(Integer id, Timestamp timestamp, String username, String text, String imageUrl, Object extra) {
+    public MessageRecord(Integer id, Timestamp timestamp, String username, String text, String imageUrl, Object data) {
         super(Message.MESSAGE);
 
         set(0, id);
@@ -334,6 +334,6 @@ public class MessageRecord extends UpdatableRecordImpl<MessageRecord> implements
         set(2, username);
         set(3, text);
         set(4, imageUrl);
-        set(5, extra);
+        set(5, data);
     }
 }

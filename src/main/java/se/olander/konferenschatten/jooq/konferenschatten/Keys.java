@@ -11,7 +11,9 @@ import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
 
 import se.olander.konferenschatten.jooq.konferenschatten.tables.Message;
+import se.olander.konferenschatten.jooq.konferenschatten.tables.Meta;
 import se.olander.konferenschatten.jooq.konferenschatten.tables.records.MessageRecord;
+import se.olander.konferenschatten.jooq.konferenschatten.tables.records.MetaRecord;
 
 
 /**
@@ -33,12 +35,14 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final Identity<MessageRecord, Integer> IDENTITY_MESSAGE = Identities0.IDENTITY_MESSAGE;
+    public static final Identity<MetaRecord, Integer> IDENTITY_META = Identities0.IDENTITY_META;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<MessageRecord> KEY_MESSAGE_PRIMARY = UniqueKeys0.KEY_MESSAGE_PRIMARY;
+    public static final UniqueKey<MetaRecord> KEY_META_PRIMARY = UniqueKeys0.KEY_META_PRIMARY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -51,9 +55,11 @@ public class Keys {
 
     private static class Identities0 extends AbstractKeys {
         public static Identity<MessageRecord, Integer> IDENTITY_MESSAGE = createIdentity(Message.MESSAGE, Message.MESSAGE.ID);
+        public static Identity<MetaRecord, Integer> IDENTITY_META = createIdentity(Meta.META, Meta.META.ID);
     }
 
     private static class UniqueKeys0 extends AbstractKeys {
         public static final UniqueKey<MessageRecord> KEY_MESSAGE_PRIMARY = createUniqueKey(Message.MESSAGE, "KEY_message_PRIMARY", Message.MESSAGE.ID);
+        public static final UniqueKey<MetaRecord> KEY_META_PRIMARY = createUniqueKey(Meta.META, "KEY_meta_PRIMARY", Meta.META.ID);
     }
 }

@@ -94,9 +94,9 @@ public class MessageDao extends DAOImpl<MessageRecord, se.olander.konferenschatt
     }
 
     /**
-     * Fetch records that have <code>extra IN (values)</code>
+     * Fetch records that have <code>data IN (values)</code>
      */
-    public List<se.olander.konferenschatten.jooq.konferenschatten.tables.pojos.Message> fetchByExtra(Object... values) {
-        return fetch(Message.MESSAGE.EXTRA, values);
+    public List<se.olander.konferenschatten.jooq.konferenschatten.tables.pojos.Message> fetchByData(Object... values) {
+        return fetch(Message.MESSAGE.DATA, values);
     }
 }
