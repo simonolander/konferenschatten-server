@@ -18,7 +18,7 @@ class MetaEndpoint (@Autowired val dslContext: DSLContext) {
     fun postMeta(@RequestBody meta: CreateMetaDto): Meta {
         val record = MetaRecord()
         record.username = meta.username
-        record.data = meta.data
+        record.data = ObjectMapper().writeValueAsString(meta.data)
 
         val answer = dslContext.insertInto(Tables.META)
                 .set(record)
